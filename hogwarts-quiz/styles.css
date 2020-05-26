@@ -204,3 +204,7 @@ h3 {
 #closeIcon:hover {
     cursor: pointer;
 }
+
+#button {
+	margin-bottom: 35px;
+}
