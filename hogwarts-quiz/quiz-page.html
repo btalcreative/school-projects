@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	
+<style type="text/css">
+	@import url("styles.css");
+</style>
+	
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="quiz.js"></script>
+	
+<title>Sorting Hat Quiz</title>
+</head>
+
+<body>
+	<div class="wrapper">
+	
+		<div id="overlay"></div>
+<div id="modal">
+    <div id="content">
+        <!-- CUSTOMIZE YOUR POPUP HERE -->
+        
+		<img src="images/sorting-hat.png" width="442" height="350" alt="The sorting hat from Harry Potter. "/>
+		<h2 id="results"></h2>
+        <!-- END CUSTOMIZE -->
+    </div>
+    <span id="closeIcon"></span>
+</div>
+		
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="quiz-page.html">Sorting Hat Quiz</a></li>
+			</ul>
+		</nav>
+	
+		<h1>Sorting Hat Quiz</h1>
+		<h2>Answer these questions to see which Hogwarts House you are in!</h2>
+		
+		<form id="quiz">
+			<p>1. <span id="q1"></span><br>
+				<input type="radio" name="question1" value="gryffindor" id="q1a1button" autocomplete="off" required><label for="q1a1button"><span id="q1a1"></span></label><br>
+				<input type="radio" name="question1" value="ravenclaw" id="q1a2button" autocomplete="off"><label for="q1a2button"><span id="q1a2"></span></label><br>
+				<input type="radio" name="question1" value="slytherin" id="q1a3button" autocomplete="off"><label for="q1a3button"><span id="q1a3"></span></label><br>
+				<input type="radio" name="question1" value="hufflepuff" id="q1a4button" autocomplete="off"><label for="q1a4button"><span id="q1a4"></span></label><br>
+			</p>
+	
+			<p>2. <span id="q2"></span><br>
+				<input type="radio" name="question2" value="gryffindor" id="q2a1button" autocomplete="off" required><label for="q2a1button"><span id="q2a1"></span></label><br>
+				<input type="radio" name="question2" value="ravenclaw" id="q2a2button" autocomplete="off"><label for="q2a2button"><span id="q2a2"></span></label><br>
+				<input type="radio" name="question2" value="slytherin" id="q2a3button" autocomplete="off"><label for="q2a3button"><span id="q2a3"></span></label><br>
+				<input type="radio" name="question2" value="hufflepuff" id="q2a4button" autocomplete="off"><label for="q2a4button"><span id="q2a4"></span></label><br>
+			</p>
+		
+			<p>3. <span id="q3"></span><br>
+				<input type="radio" name="question3" value="gryffindor" id="q3a1button" autocomplete="off" required><label for="q3a1button"><span id="q3a1"></span></label><br>
+				<input type="radio" name="question3" value="ravenclaw" id="q3a2button" autocomplete="off"><label for="q3a2button"><span id="q3a2"></span></label><br>
+				<input type="radio" name="question3" value="slytherin" id="q3a3button" autocomplete="off"><label for="q3a3button"><span id="q3a3"></span></label><br>
+				<input type="radio" name="question3" value="hufflepuff" id="q3a4button" autocomplete="off"><label for="q3a4button"><span id="q3a4"></span></label><br>
+			</p>
+		
+			<p>4. <span id="q4"></span><br>
+				<input type="radio" name="question4" value="gryffindor" id="q4a1button" autocomplete="off" required><label for="q4a1button"><span id="q4a1"></span></label><br>
+				<input type="radio" name="question4" value="ravenclaw" id="q4a2button" autocomplete="off"><label for="q4a2button"><span id="q4a2"></span></label><br>
+				<input type="radio" name="question4" value="slytherin" id="q4a3button" autocomplete="off"><label for="q4a3button"><span id="q4a3"></span></label><br>
+				<input type="radio" name="question4" value="hufflepuff" id="q4a4button" autocomplete="off"><label for="q4a4button"><span id="q4a4"></span></label><br>
+			</p>
+		
+			<p>5. <span id="q5"></span><br>
+				<input type="radio" name="question5" value="gryffindor" id="q5a1button" autocomplete="off" required><label for="q5a1button"><span id="q5a1"></span></label><br>
+				<input type="radio" name="question5" value="ravenclaw" id="q5a2button" autocomplete="off"><label for="q5a2button"><span id="q5a2"></span></label><br>
+				<input type="radio" name="question5" value="slytherin" id="q5a3button" autocomplete="off"><label for="q5a3button"><span id="q5a3"></span></label><br>
+				<input type="radio" name="question5" value="hufflepuff" id="q5a4button" autocomplete="off"><label for="q5a4button"><span id="q5a4"></span></label><br>
+			</p>
+		
+			<p>6. <span id="q6"></span><br>
+				<input type="radio" name="question6" value="gryffindor" id="q6a1button" autocomplete="off" required><label for="q6a1button"><span id="q6a1"></span></label><br>
+				<input type="radio" name="question6" value="ravenclaw" id="q6a2button" autocomplete="off"><label for="q6a2button"><span id="q6a2"></span></label><br>
+				<input type="radio" name="question6" value="slytherin" id="q6a3button" autocomplete="off"><label for="q6a3button"><span id="q6a3"></span></label><br>
+				<input type="radio" name="question6" value="hufflepuff" id="q6a4button" autocomplete="off"><label for="q6a4button"><span id="q6a4"></span></label><br>
+			</p>
+		
+			<p>7. <span id="q7"></span><br>
+				<input type="radio" name="question7" value="gryffindor" id="q7a1button" autocomplete="off" required><label for="q7a1button"><span id="q7a1"></span></label><br>
+				<input type="radio" name="question7" value="ravenclaw" id="q7a2button" autocomplete="off"><label for="q7a2button"><span id="q7a2"></span></label><br>
+				<input type="radio" name="question7" value="slytherin" id="q7a3button" autocomplete="off"><label for="q7a3button"><span id="q7a3"></span></label><br>
+				<input type="radio" name="question7" value="hufflepuff" id="q7a4button" autocomplete="off"><label for="q7a4button"><span id="q7a4"></span></label><br>
+			</p>
+	
+			<p>8. <span id="q8"></span><br>
+				<input type="radio" name="question8" value="gryffindor" id="q8a1button" autocomplete="off" required><label for="q8a1button"><span id="q8a1"></span></label><br>
+				<input type="radio" name="question8" value="ravenclaw" id="q8a2button" autocomplete="off"><label for="q8a2button"><span id="q8a2"></span></label><br>
+				<input type="radio" name="question8" value="slytherin" id="q8a3button" autocomplete="off"><label for="q8a3button"><span id="q8a3"></span></label><br>
+				<input type="radio" name="question8" value="hufflepuff" id="q8a4button" autocomplete="off"><label for="q8a4button"><span id="q8a4"></span></label><br>
+			</p>
+		
+			<p>9. <span id="q9"></span><br>
+				<input type="radio" name="question9" value="gryffindor" id="q9a1button" autocomplete="off" required><label for="q9a1button"><span id="q9a1"></span></label><br>
+				<input type="radio" name="question9" value="ravenclaw" id="q9a2button" autocomplete="off"><label for="q9a2button"><span id="q9a2"></span></label><br>
+				<input type="radio" name="question9" value="slytherin" id="q9a3button" autocomplete="off"><label for="q9a3button"><span id="q9a3"></span></label><br>
+				<input type="radio" name="question9" value="hufflepuff" id="q9a4button" autocomplete="off"><label for="q9a4button"><span id="q9a4"></span></label><br>
+			</p>		
+		
+			<p>10. <span id="q10"></span><br>
+				<input type="radio" name="question10" value="gryffindor" id="q10a1button" autocomplete="off" required><label for="q10a1button"><span id="q10a1"></span></label><br>
+				<input type="radio" name="question10" value="ravenclaw" id="q10a2button" autocomplete="off"><label for="q10a2button"><span id="q10a2"></span></label><br>
+				<input type="radio" name="question10" value="slytherin" id="q10a3button" autocomplete="off"><label for="q10a3button"><span id="q10a3"></span></label><br>
+				<input type="radio" name="question10" value="hufflepuff" id="q10a4button" autocomplete="off"><label for="q10a4button"><span id="q10a4"></span></label><br>
+			</p>
+		
+			<input type="submit" class="button" id="button" value="Find your house!">
+			
+		</form>
+	
+		
+		
+	</div>	
+</body>
+</html>
